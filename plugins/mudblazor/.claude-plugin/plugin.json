@@ -1,0 +1,5 @@
+{
+  "name": "mudblazor",
+  "description": "MudBlazor UI skill backed by an offline, source-verified copy of the docs, plus a maintainer skill that syncs it with new releases.",
+  "author": { "name": "BillyCool" }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "aimp",
+  "description": "AIMP plugin development skill backed by an offline copy of the AIMP SDK, plus a maintainer skill that syncs it with new SDK drops.",
+  "author": { "name": "BillyCool" }
+}

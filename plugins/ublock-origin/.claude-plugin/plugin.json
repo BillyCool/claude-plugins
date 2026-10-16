@@ -1,0 +1,5 @@
+{
+  "name": "ublock-origin",
+  "description": "uBlock Origin filter-writing skill plus a maintainer skill that syncs it with new uBO releases.",
+  "author": { "name": "BillyCool" }
+}

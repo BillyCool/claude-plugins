@@ -1,0 +1,5 @@
+{
+  "name": "violentmonkey",
+  "description": "Writes correct, minimal Violentmonkey userscripts using the real GM_/GM.* API and official @violentmonkey/* libraries.",
+  "author": { "name": "BillyCool" }
+}

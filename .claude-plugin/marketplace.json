@@ -1,0 +1,27 @@
+{
+  "name": "billycool",
+  "description": "BillyCool's Claude Code plugins and skills",
+  "owner": { "name": "BillyCool" },
+  "plugins": [
+    {
+      "name": "mudblazor",
+      "source": "./plugins/mudblazor",
+      "description": "MudBlazor UI skill backed by an offline, source-verified copy of the docs, plus a maintainer skill."
+    },
+    {
+      "name": "ublock-origin",
+      "source": "./plugins/ublock-origin",
+      "description": "uBlock Origin filter-writing skill plus a maintainer skill."
+    },
+    {
+      "name": "aimp",
+      "source": "./plugins/aimp",
+      "description": "AIMP plugin development skill backed by an offline copy of the AIMP SDK, plus a maintainer skill."
+    },
+    {
+      "name": "violentmonkey",
+      "source": "./plugins/violentmonkey",
+      "description": "Writes correct, minimal Violentmonkey userscripts."
+    }
+  ]
+}

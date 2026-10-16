@@ -22,6 +22,11 @@
       "name": "violentmonkey",
       "source": "./plugins/violentmonkey",
       "description": "Writes correct, minimal Violentmonkey userscripts."
+    },
+    {
+      "name": "redirector",
+      "source": "./plugins/redirector",
+      "description": "Writes correct Redirector browser-extension rules, tested against the extension engine, as copy-paste fields or an importable JSON file."
     }
   ]
 }

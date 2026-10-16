@@ -1,0 +1,5 @@
+{
+  "name": "redirector",
+  "description": "Writes correct Redirector (einaregilsson/Redirector) browser-extension rules, tested against a faithful port of the extension's matching engine, and exports an importable JSON file.",
+  "author": { "name": "BillyCool" }
+}

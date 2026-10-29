@@ -1,0 +1,5 @@
+{
+  "name": "spectre-console",
+  "description": "Spectre.Console / Spectre.Console.Cli skill backed by an offline, source-verified copy of the API and docs, plus a maintainer skill that syncs it with new releases.",
+  "author": { "name": "BillyCool" }
+}

@@ -23,6 +23,7 @@ Skills are namespaced by plugin, e.g. `mudblazor:mudblazor-ui-writer`, and still
 | [`violentmonkey`](plugins/violentmonkey/) | `violentmonkey-userscript-writer` | Writes correct, minimal Violentmonkey userscripts using the real GM_/GM.* API and the official `@violentmonkey/*` libraries. |
 | [`mudblazor`](plugins/mudblazor/) | `mudblazor-ui-writer`, `mudblazor-skill-maintainer` | MudBlazor UI development backed by an offline, source-verified copy of the docs; the maintainer re-syncs it for new releases. |
 | [`aimp`](plugins/aimp/) | `aimp-plugin-developer`, `aimp-sdk-skill-maintainer` | AIMP plugin development against an offline copy of the AIMP SDK; the maintainer regenerates it for new SDK releases. |
+| [`spectre-console`](plugins/spectre-console/) | `spectre-console-writer`, `spectre-console-skill-maintainer` | Spectre.Console and Spectre.Console.Cli development (markup, widgets, prompts, live displays, CLI apps, testing) backed by an offline copy of the real API extracted from the tagged source, with compile-checked samples; the maintainer re-extracts and re-verifies it for new releases. |
 | [`redirector`](plugins/redirector/) | `redirector-rule-writer` | Interviews you for a URL, target and constraints, then writes a Redirector rule tested against the extension's real matching engine, as copy-paste fields or an importable JSON file. |
 
 ## Layout

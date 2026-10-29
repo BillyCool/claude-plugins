@@ -24,6 +24,11 @@
       "description": "Writes correct, minimal Violentmonkey userscripts."
     },
     {
+      "name": "spectre-console",
+      "source": "./plugins/spectre-console",
+      "description": "Spectre.Console / Spectre.Console.Cli skill backed by an offline, source-verified copy of the API and docs, plus a maintainer skill."
+    },
+    {
       "name": "redirector",
       "source": "./plugins/redirector",
       "description": "Writes correct Redirector browser-extension rules, tested against the extension engine, as copy-paste fields or an importable JSON file."

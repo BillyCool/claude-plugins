@@ -1,0 +1,62 @@
+# Extension classes (generated from source)
+
+Each extension method is listed on the *target type's* page under "Extension methods that apply"; this file lists the static classes that hold them.
+
+- `AlignExtensions` (core, 6 methods) — Contains extension methods for `Align`.
+- `AlignableExtensions` (core, 4 methods) — Contains extension methods for `IAlignable`.
+- `AnsiConsoleExtensions` (core, 35 methods) — Contains extension methods for `IAnsiConsole`.
+- `BarChartExtensions` (core, 15 methods) — Contains extension methods for `BarChart`.
+- `BoxExtensions` (core, 1 methods) — Contains extension methods for `BoxBorder`.
+- `BreakdownChartExtensions` (core, 18 methods) — Contains extension methods for `BreakdownChart`.
+- `CalendarExtensions` (core, 8 methods) — Contains extension methods for `Calendar`.
+- `CanvasImageExtensions` (imagesharp, 7 methods) — Contains extension methods for `CanvasImage`.
+- `CharExtensions` (core, 1 methods) — Contains extension methods for `char`.
+- `ColumnExtensions` (core, 2 methods) — Contains extension methods for `IColumn`.
+- `ConfiguratorExtensions` (cli, 23 methods) — Contains extensions for `IConfigurator` and `IConfigurator{TSettings}`.
+- `ConfirmationPromptExtensions` (core, 12 methods) — Contains extension methods for `ConfirmationPrompt`.
+- `CursorExtensions` (core, 10 methods) — Contains extension methods for `IAnsiConsoleCursor`.
+- `ExceptionExtensions` (core, 2 methods) — Contains extension methods for `Exception`.
+- `ExpandableExtensions` (core, 2 methods) — Contains extension methods for `IExpandable`.
+- `FigletTextExtensions` (core, 5 methods) — Contains extension methods for `FigletText`.
+- `GridExtensions` (core, 5 methods) — Contains extension methods for `Grid`.
+- `HasBorderExtensions` (core, 4 methods) — Contains extension methods for `IHasBorder`.
+- `HasBoxBorderExtensions` (core, 24 methods) — Contains extension methods for `IHasBoxBorder`.
+- `HasCultureExtensions` (core, 3 methods) — Contains extension methods for `IHasCulture`.
+- `HasJustificationExtensions` (core, 4 methods) — Contains extension methods for `IHasJustification`.
+- `HasTableBorderExtensions` (core, 20 methods) — Contains extension methods for `IHasTableBorder`.
+- `HasTreeNodeExtensions` (core, 9 methods) — Contains extension methods for `IHasTreeNodes`.
+- `JsonTextExtensions` (json, 19 methods) — Contains extension methods for `JsonText`.
+- `LayoutExtensions` (core, 3 methods) — Contains extension methods for `Layout`.
+- `LiveDisplayExtensions` (core, 3 methods) — Contains extension methods for `LiveDisplay`.
+- `MultiSelectionPromptExtensions` (core, 22 methods) — Contains extension methods for `MultiSelectionPrompt{T}`.
+- `OverflowableExtensions` (core, 4 methods) — Contains extension methods for `IOverflowable`.
+- `PaddableExtensions` (core, 7 methods) — Contains extension methods for `IPaddable`.
+- `PaddingExtensions` (core, 4 methods) — Contains extension methods for `Padding`.
+- `PanelExtensions` (core, 3 methods) — Contains extension methods for `Panel`.
+- `PercentageColumnExtensions` (core, 2 methods) — Contains extension methods for `PercentageColumn`.
+- `ProgressBarColumnExtensions` (core, 3 methods) — Contains extension methods for `ProgressBarColumn`.
+- `ProgressExtensions` (core, 8 methods) — Contains extension methods for `Progress`.
+- `ProgressTaskExtensions` (core, 6 methods) — Contains extension methods for `ProgressTask`.
+- `RecorderExtensions` (core, 2 methods) — Contains extension methods for `Recorder`.
+- `RemainingTimeColumnExtensions` (core, 1 methods) — Contains extension methods for `RemainingTimeColumn`.
+- `RenderableExtensions` (core, 1 methods) — Contains extension methods for `IRenderable`.
+- `RuleExtensions` (core, 2 methods) — Contains extension methods for `RuleExtensions`.
+- `SelectionPromptExtensions` (core, 17 methods) — Contains extension methods for `SelectionPrompt{T}`.
+- `ShouldlyExtensions` (testing, 1 methods) — Provides extensions for testing using the Shouldly-style fluent assertions.
+- `SpinnerColumnExtensions` (core, 3 methods) — Contains extension methods for `SpinnerColumn`.
+- `SpinnerExtensions` (core, 2 methods) — Provides extension methods for running tasks with a spinner animation.
+- `StatusContextExtensions` (core, 3 methods) — Contains extension methods for `StatusContext`.
+- `StatusExtensions` (core, 3 methods) — Contains extension methods for `Status`.
+- `StringExtensions` (ansi, 2 methods) — Contains extension methods for `string`.
+- `StyleExtensions` (ansi, 3 methods) — Contains extension methods for `Style`.
+- `TableBorderExtensions` (core, 1 methods) — Contains extension methods for `TableBorder`.
+- `TableColumnExtensions` (core, 4 methods) — Contains extension methods for `TableColumn`.
+- `TableExtensions` (core, 24 methods) — Contains extension methods for `Table`.
+- `TestConsoleExtensions` (testing, 8 methods) — Contains extensions for `TestConsole`.
+- `TextPathExtensions` (core, 8 methods) — Contains extension methods for `TextPath`.
+- `TextPromptExtensions` (core, 22 methods) — Contains extension methods for `TextPrompt{T}`.
+- `TreeExtensions` (core, 2 methods) — Contains extension methods for `Tree`.
+- `TreeGuideExtensions` (core, 1 methods) — Contains extension methods for `TreeGuide`.
+- `TreeNodeExtensions` (core, 3 methods) — Contains extension methods for `TreeNode`.
+- `UnsafeConfiguratorExtensions` (cli, 4 methods) — Contains unsafe extensions for `IConfigurator`.
+- `VisibilityExtensions` (core, 2 methods) — Contains extension methods for `IHasVisibility`.

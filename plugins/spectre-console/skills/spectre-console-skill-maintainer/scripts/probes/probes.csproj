@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Behaviour probes. Run: dotnet run -p:SpectreVersion=0.57.2 (from this folder) -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SpectreVersion Condition="'$(SpectreVersion)' == ''">0.57.2</SpectreVersion>
+    <NoWarn>$(NoWarn);CS8618;CS1998</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="$(SpectreVersion)" />
+    <PackageReference Include="Spectre.Console.Cli" Version="$(SpectreVersion)" />
+    <PackageReference Include="Spectre.Console.Testing" Version="$(SpectreVersion)" />
+    <PackageReference Include="Spectre.Console.Cli.Testing" Version="$(SpectreVersion)" />
+  </ItemGroup>
+</Project>

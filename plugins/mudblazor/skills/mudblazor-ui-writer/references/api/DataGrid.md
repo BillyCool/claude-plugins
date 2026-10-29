@@ -136,6 +136,10 @@ Adds an expand or collapse button to each `MudDataGrid{T}` row, revealing nested
 | `HeaderStyleFunc` | `Func<IEnumerable<T>, string>?` | – | The function which calculates CSS styles for the header. |
 | `HeaderTemplate` | `RenderFragment<HeaderContext<T>>?` | – | The template used to display this column's header. |
 | `CellTemplate` | `RenderFragment<CellContext<T>>?` | – | The template used to display this column's value cells. |
+| `CellClass` | `string?` | `null` | The CSS classes applied to this column's value cells. Defaults to `null`. Separate multiple classes with spaces. |
+| `CellClassFunc` | `Func<T, string>?` | `null` | The function which calculates CSS classes for this column's value cells. Defaults to `null`. Separate multiple classes with spaces. |
+| `CellStyle` | `string?` | `null` | The CSS styles applied to this column's value cells. Defaults to `null`. |
+| `CellStyleFunc` | `Func<T, string>?` | `null` | The function which calculates CSS styles for this column's value cells. Defaults to `null`. |
 | `InitiallyExpandedFunc` | `Func<T, bool>?` | `a function that always returns `false` | The function which determines whether the row should be initially expanded. This function takes an item of type <typeparamref name="T"/> as input and returns a boolean indicating whether the row should be expanded. Requires item to override the Equals and GetHashCode methods. Defaults to a function that always returns `false`. |
 | `HierarchyVisibilityToggled` | `EventCallback<DataGridHierarchyVisibilityToggledEventArgs<T>>` | – | Occurs when hierarchy visibility is toggled for an item in this column. |
 
@@ -214,6 +218,7 @@ Displays rows of data in a sortable, filterable grid with multiselection, pagina
 | `CanCancelEdit` | `bool` | `true` | Shows a cancel button during inline editing when `EditMode` is `Cell`. Defaults to `true`. |
 | `LoadingProgressColor` | `Color` | `Color.Info` | The color of the loading progress indicator while `Loading` is `true`. Defaults to `Info`. Theme colors are supported. |
 | `ToolBarContent` | `RenderFragment?` | – | Any custom content to show in this grid's toolbar. |
+| `ToolBarWrapContent` | `bool` | `false` | Allows the toolbar's content to wrap onto multiple lines. Defaults to `false`. See `WrapContent`. |
 | `HorizontalScrollbar` | `bool` | `false` | Shows a horizontal scrollbar. Defaults to `false`. |
 | `ColumnResizeMode` | `ResizeMode` | `None` | The column resizing behavior for this grid. Defaults to `None`. Other values include `Column` and `Container`. |
 | `HeaderClass` | `string?` | – | The CSS classes applied to the grid header. These classes are applied to the `thead` tag of the grid. Multiple classes must be separated by spaces. |
@@ -233,7 +238,7 @@ Displays rows of data in a sortable, filterable grid with multiselection, pagina
 | `RowsPerPageChanged` | `EventCallback<int>` | `10` | The number of rows displayed for each page. Defaults to `10`. Applies when the `PagerContent` section contains a `MudTablePager`. When this property changes, the `RowsPerPageChanged` event occurs. |
 | `CurrentPageChanged` | `EventCallback<int>` | `0` | The current page being displayed. Defaults to `0`. Applies when the `PagerContent` section contains a `MudTablePager`. |
 | `ReadOnly` | `bool` | `true` | Prevents values from being edited. Defaults to `true`. When `false`, the edit behavior is controlled via `EditMode`. |
-| `SelectedItems` | `HashSet<T>?` | – | The currently selected rows when `MultiSelection` is `true`. This property can be bound (`@bind-SelectedItems`) to initially select rows. Use `SelectedItem` when `MultiSelection` is `false`. |
+| `SelectedItems` | `HashSet<T>?` | – | The currently selected rows when `MultiSelection` is `true`. This property can be bound (`@bind-SelectedItems`) to initially select rows. Use `SelectedItem` when `MultiSelection` is `false`. To change the selection from code, assign a new set. A change is detected by reference, so editing the bound set in place, such as calling `Clear()`, does not update the grid. |
 | `SelectedItem` | `T?` | – | The currently selected row when `MultiSelection` is `false`. This property can be bound (`@bind-SelectedItem`) to initially select a row. Use `SelectedItems` when `MultiSelection` is `true`. |
 | `GroupExpanded` | `bool` | `false` | Expands grouped columns by default. Overrides `GroupExpanded` Defaults to `false`. Applies when `Groupable` is `true`. |
 | `GroupClass` | `string?` | – | The CSS classes applied to column groups. Applies when `Groupable` is `true`. Multiple classes must be separated by spaces. |

@@ -2,17 +2,17 @@
 
 This skill's knowledge is confirmed against live MudBlazor source, not memory.
 
-- **MudBlazor version reflected:** v9.11.0 (released 2026-09-27)
-- **Last synced:** 2026-10-05 (incremental sync from v9.8.0)
+- **MudBlazor version reflected:** v9.12.0 (released 2026-10-29)
+- **Last synced:** 2026-10-30 (incremental sync from v9.11.0)
 - **Synced by:** `mudblazor-skill-maintainer` skill (extraction script:
   `../mudblazor-skill-maintainer/scripts/extract_api.py`)
-- **Source of truth:** https://github.com/MudBlazor/MudBlazor at tag `v9.11.0`
+- **Source of truth:** https://github.com/MudBlazor/MudBlazor at tag `v9.12.0`
 
 ## What was extracted mechanically (regenerate, don't hand-edit)
 
 | Files | Generated from |
 |---|---|
-| `api/*.md` (84 files) | `src/MudBlazor/Components/**/*.cs` + `Mud*.razor` (razor-only components) + `src/MudBlazor/Base/*.cs` — every `[Parameter]` property with type, default, XML doc summary/remarks, inheritance. 154 `Mud*` components, ~1,800 parameters (component count unchanged from v9.8.0; a handful of new parameters). |
+| `api/*.md` (84 files) | `src/MudBlazor/Components/**/*.cs` + `Mud*.razor` (razor-only components) + `src/MudBlazor/Base/*.cs` — every `[Parameter]` property with type, default, XML doc summary/remarks, inheritance. 154 `Mud*` components, ~1,800 parameters (component count unchanged since v9.8.0; a handful of new parameters). |
 | `components-index.md` | class declarations + class-level XML docs |
 | `enums.md` | `src/MudBlazor/{Enums,Services,Utilities}/**` + enums found in Components — 87 enums with `[Description]` CSS names |
 
@@ -26,6 +26,33 @@ This skill's knowledge is confirmed against live MudBlazor source, not memory.
 | `layout-and-breakpoints.md` | `Styles/abstracts/_variables.scss` (breakpoint px), generated `api/{Layout,Grid,Container,Drawer,Hidden,Stack,BreakpointProvider}.md` |
 | `services.md` | `src/MudBlazor/Services/Dialog/{IDialogService,DialogOptions}.cs`, `Components/Snackbar/SnackbarService.cs`, `Services/Browser/IBrowserViewportService.cs`, `Services/MudGlobal.cs` |
 | `icons-and-colors.md` | `src/MudBlazor/Icons/**` (const counts per class), `src/MudBlazor/Colors/Colors.cs` |
+
+## v9.11.0 → v9.12.0 changes worth knowing
+
+- New parameters (in `api/`): `MudAutocomplete` `OuterClass`; `MudDataGrid`
+  `ToolBarWrapContent` and column `CellClass`/`CellClassFunc`/`CellStyle`/`CellStyleFunc`;
+  `MudText` `Truncate`; `MudDivider` `ChildContent`. Doc text changed for
+  `DateFormat` (default `null` = culture short pattern), base `Culture`
+  (`MudDatePicker`/`MudDateRangePicker` default to `CurrentCulture`;
+  `MudNumericField` uses `InvariantCulture` unless `Culture`/`Format`/`Pattern` set)
+  and `SelectedItems` (assign a new set; in-place edits aren't detected).
+- Not tabulated (not component parameters): chart option `ConnectNullPoints`
+  (`ChartOptions`, `IAxisLineChartOptions`) with `null` points in line charts;
+  `FilterOperator.Enum.IsAnyOf` for enum columns in `MudDataGrid`
+  (its filter `Value` is a collection of enum values; `ServerData` code must handle it
+  or hide it via `Column.FilterOperators`).
+- Analyzer: reading `MudStep.Title/SecondaryText`, `MinDate`/`MaxDate`
+  (date pickers) and `MinDays`/`MaxDays` (range picker) via a component
+  reference raises `MUD0012`; use `GetState`. Added to SKILL.md guidance.
+- Behavior: out-of-order async results are ignored for `MudAutocomplete`,
+  `MudDataGrid`/`MudTable` `ServerData`; `MudDateRangePicker` with `MinDays`
+  allows earlier dates when the span fits (`MinDays` <= 0 acts as 1);
+  `MudAvatar` `Text` variant is now transparent with theme-colored text.
+- Services/breakpoints: `AddMudServices` lifetimes and `_variables.scss`
+  breakpoints (0/600/960/1280/1920/2560) re-checked in source, unchanged;
+  `IDialogService` unchanged in shape. Extraction counts: 154 components,
+  87 enums, 83 folders. Theme/utility SCSS were not re-diffed in depth (no
+  release-note entries).
 
 ## v9.8.0 → v9.11.0 changes worth knowing
 
@@ -109,7 +136,7 @@ This skill's knowledge is confirmed against live MudBlazor source, not memory.
 - Multi-line property declarations may drop the default value (rare; the
   "Defaults to …" remark text usually still captures it).
 
-- `MudFormComponent.Validation` is `<inheritdoc/>` in v9.11.0, so the script
+- `MudFormComponent.Validation` is `<inheritdoc/>` in v9.11.0/v9.12.0, so the script
   extracts an empty summary; the v9.8.0 text was restored by hand in
   `api/_base-classes.md` — re-apply after regenerating.
 

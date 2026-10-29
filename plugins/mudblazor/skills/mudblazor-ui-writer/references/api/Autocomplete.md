@@ -6,6 +6,7 @@ A text input for searching and selecting from a list of options. Unlike `MudSele
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
+| `OuterClass` | `string?` | `null` | The CSS classes applied to the outer `div`. Defaults to `null`. Multiple classes must be separated by spaces. |
 | `InputClass` | `string?` | – | Input's classnames, separated by space. |
 | `PopoverClass` | `string?` | `null` | The CSS classes applied to the popover. Defaults to `null`. You can use spaces to separate multiple classes. |
 | `ListClass` | `string?` | `null` | The CSS classes applied to the internal list. Defaults to `null`. You can use spaces to separate multiple classes. |

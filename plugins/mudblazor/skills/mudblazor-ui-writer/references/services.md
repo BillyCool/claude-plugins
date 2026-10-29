@@ -1,6 +1,6 @@
 # Services — dialogs, snackbars, viewport, global defaults
 
-Signatures verified against v9.11.0 source (`src/MudBlazor/Services`,
+Signatures verified against v9.12.0 source (`src/MudBlazor/Services`,
 `src/MudBlazor/Components/Snackbar/SnackbarService.cs`,
 `src/MudBlazor/Services/MudGlobal.cs`). All are registered by
 `AddMudServices()` (see `getting-started.md`).

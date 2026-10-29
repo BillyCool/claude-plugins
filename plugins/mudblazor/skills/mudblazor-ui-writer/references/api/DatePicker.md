@@ -9,7 +9,7 @@ Base class for MudBlazor date pickers such as `MudDatePicker` and `MudDateRangeP
 | `MaxDate` | `DateTime?` | – | The maximum selectable date. |
 | `MinDate` | `DateTime?` | – | The minimum selectable date. |
 | `OpenTo` | `OpenTo` | `OpenTo.Date` | The initial view to display. Defaults to `Date`. |
-| `DateFormat` | `string?` | – | The format for selected dates. |
+| `DateFormat` | `string?` | `null`, which uses the `ShortDatePattern` of `Culture` | The format for selected dates. Defaults to `null`, which uses the `ShortDatePattern` of `Culture`. A `/` in the format is replaced by the culture's date separator; use `'/'` for a literal slash. |
 | `FirstDayOfWeek` | `DayOfWeek?` | `the current culture's `DateTimeFormat` | The day representing the first day of the week. Defaults to the current culture's `DateTimeFormat.FirstDayOfWeek`. |
 | `PickerMonthChanged` | `EventCallback<DateTime?>` | – | Occurs when `PickerMonth` has changed. |
 | `ClosingDelay` | `int` | `100` | The delay, in milliseconds, before closing the picker after a value is selected. Defaults to `100`. This delay helps the user see that a date has been selected before the popover disappears. |

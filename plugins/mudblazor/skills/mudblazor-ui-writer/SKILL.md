@@ -7,14 +7,14 @@ description: >-
   breakpoints, colors, theming, typography, CSS utility classes, dialogs,
   snackbars, or data grids ("add a MudTable", "make this responsive", "why
   doesn't this MudSelect bind", "customize the theme"). Covers every component
-  and enum in MudBlazor v9.11.0.
+  and enum in MudBlazor v9.12.0.
 ---
 
 # MudBlazor UI writer
 
 Write correct, idiomatic MudBlazor (Blazor component library) UIs. This skill
 is a **fully offline copy of the MudBlazor docs**, extracted and verified from
-the actual v9.11.0 source code (see `references/version.md` for provenance) —
+the actual v9.12.0 source code (see `references/version.md` for provenance) —
 prefer it over memory, which may reflect older MudBlazor versions with
 different APIs.
 
@@ -102,7 +102,10 @@ component parameter, default, enum, utility class, and theme default is in
   now names the replacement for parameters removed in v7–v9 (rename,
   inverted value, `@bind-` partner changes), so follow its hint rather than
   guessing.
-- **Version honesty.** This skill documents v9.11.0. If the user's project pins
+- **MUD0012 (v9.12):** reading `MudStep.Title`/`SecondaryText`, or `MinDate`/`MaxDate`
+  (and `MinDays`/`MaxDays` on `MudDateRangePicker`) through a component reference
+  now raises MUD0012 — use `GetState(x => x.Prop)` instead. Setting them in markup is fine.
+- **Version honesty.** This skill documents v9.12.0. If the user's project pins
   an older major (check their `.csproj`), flag API differences rather than
   assuming — v7 renamed many members and halved spacing increments.
 

@@ -11,3 +11,4 @@ A thin line that groups content in lists and layouts. Only use dividers if items
 | `Light` | `bool` | `false` | Uses a lighter color. Defaults to `false`. |
 | `Vertical` | `bool` | `false` | Displays the divider vertically. Defaults to `false`. |
 | `DividerType` | `DividerType` | `DividerType.FullWidth` | The type of divider to display. Defaults to `FullWidth`. |
+| `ChildContent` | `RenderFragment?` | – | The content within this component. |
